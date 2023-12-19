@@ -4,8 +4,10 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const BookServices = () => {
-  const server = useLoaderData();   
+  const server = useLoaderData(); 
+  // const product = useLoaderData();  
   const { title, _id, price, img } = server;
+
   const {user} = useContext(AuthContext)
 
 
@@ -51,7 +53,7 @@ const BookServices = () => {
 
   return (
     <div>
-      <h2 className="text-center text-3xl">Book Services: {title}</h2>
+      {/* <h2 className="text-center text-3xl">Book Services: {title}</h2> */}
       <form onSubmit={handleBookservice}>
         <div className="card-body">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
